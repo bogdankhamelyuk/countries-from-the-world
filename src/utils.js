@@ -8,36 +8,3 @@ export const getCountries = async () => {
     resolve(resArr);
   });
 };
-const sortName = (a, b) => {
-  // Handle undefined or null values
-  const valueA = a.name.common;
-  const valueB = b.name.common;
-  // Compare the values alphabetically
-  return valueA.localeCompare(valueB);
-};
-export const columns = [
-  {
-    title: "Country Name",
-    dataIndex: "name",
-    sorter: (a, b) => sortName(a, b),
-    render: (name) => `${name.common}, ${name.official}`,
-    width: "20%",
-  },
-  {
-    title: "Region",
-    dataIndex: "region",
-    width: "20%",
-    sorter: true,
-  },
-  {
-    title: "Population",
-    dataIndex: "population",
-    sorter: true,
-  },
-  {
-    title: "Flag",
-    dataIndex: "flags",
-    sorter: true,
-    render: (flag) => <img src={flag.svg} alt="Flag" style={{ width: 25, height: 20 }} />,
-  },
-];
