@@ -37,7 +37,7 @@ export default function MainPage() {
       });
     });
   }, [JSON.stringify(tableParams)]);
-
+  //
   return (
     <div className="page-container">
       <Table
