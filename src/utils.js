@@ -38,6 +38,6 @@ export const columns = [
     title: "Flag",
     dataIndex: "flags",
     sorter: true,
-    render: (flags) => `${flags.svg}`,
+    render: (flag) => <img src={flag.svg} alt="Flag" style={{ width: 25, height: 20 }} />,
   },
 ];
